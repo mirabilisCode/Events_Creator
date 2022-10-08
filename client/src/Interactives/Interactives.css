@@ -1,0 +1,98 @@
+﻿.text_field_container {
+  position: relative;
+  display: inline-block;
+  max-width: fit-content;
+}
+
+.custom_input {
+  box-sizing: content-box;
+  width: 14rem;
+  height: 1.2rem;
+  font-size: 0.875rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 0.7rem 2.7rem 0.7rem 0.7rem;
+  color: #757575;
+  transition: 0.1s ease-out, border-color 0.5s ease-out;
+  margin-bottom: 0px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.custom_input[type="date"] {
+  width: 16rem;
+  padding: 0.7rem;
+}
+
+.custom_input:focus {
+  outline: none !important;
+}
+
+.custom_input:not([readonly]):focus {
+  border-color: var(--color-main-theme);
+}
+
+.custom_input_label {
+  position: absolute;
+  font-size: 0.875rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #757575;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+
+.custom_input_filled {
+  box-sizing: content-box;
+  width: 14rem;
+  height: 1.2rem;
+  font-size: 0.875rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0.7rem 2.7rem 0.7rem 0.7rem;
+  color: gray;
+  margin-bottom: 0px;
+  outline: none;
+  box-shadow: none;
+  border-color: var(--color-main-theme);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 1;
+  transition: border-color 0.5s ease-out;
+}
+
+.custom_input_filled[type="date"] {
+  width: 16rem;
+  padding: 0.7rem;
+}
+
+.input_hidden:not(:focus) {
+  color: transparent !important;
+}
+
+.input_hidden:not(:focus) {
+  color: transparent !important;
+}
+
+.input_label_filled,
+.custom_input:-webkit-autofill + .custom_input_label,
+.custom_input:not([readonly]):focus + .custom_input_label {
+  position: absolute;
+  background-color: var(--color-white);
+  font-size: 0.875rem;
+  left: 0;
+  top: 0;
+  outline: none;
+  box-shadow: none;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  color: var(--color-main-theme);
+  transform: translateY(-50%) scale(0.9);
+  transition: 0.1s ease-out, color 0.5s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+  border-radius: 5px;
+}
