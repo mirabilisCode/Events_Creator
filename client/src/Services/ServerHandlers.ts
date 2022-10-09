@@ -1,7 +1,7 @@
 ﻿import { EventProps } from "../components/CreateEvent/NewEvent";
 
 async function createNewEvent(newEvent: EventProps) {
-  await fetch("http://localhost:8080/createEvent", {
+  await fetch("http://localhost:8080/CreateEvent", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -22,7 +22,7 @@ async function createNewEvent(newEvent: EventProps) {
 
 async function fetchEvents() {
   try {
-    const response = await fetch("http://localhost:8080/getAllEvents");
+    const response = await fetch("http://localhost:8080/GetAllEvents");
     if (!response.ok) {
       console.log(response.statusText);
       return;
